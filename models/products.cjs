@@ -6,12 +6,12 @@ module.exports = (sequelize, DataTypes) => {
   class Products extends Model {
     /**
      * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
+     * This method is not a part of sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.USers,{as : 'User'});
+      //this.belongsTo(models.USers,{as : 'User'});
       
     }
   }
@@ -20,32 +20,32 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     userId: {
       allowNull: false,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     title: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     description: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     status: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     createdAt: {
       allowNull: false,
-      type: Sequelize.DATE,
+      type: DataTypes.DATE,
       defaultValue : DataTypes.NOW,
     },
     updatedAt: {
       allowNull: false,
-      type: Sequelize.DATE,
+      type: DataTypes.DATE,
       defaultValue : DataTypes.NOW,
     },
 
